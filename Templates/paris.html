@@ -1,7 +1,8 @@
 <div class="container">
-<b>Click on any Student!!</b>
+<b>SEARCH FOR A STUDENT :</b> <input type="text" ng-model = "searchText.$" >
+<br><br>
 <ul class="list-group">
-<li class="list-group-item" ng-repeat= "blog in blogs">
+<li class="list-group-item" dir-paginate="blog in blogs | filter:searchText | itemsPerPage:5" >
 <a href="#/students/{{blog.id}}">{{blog.name}}</a>
 </li>
 </ul>
