@@ -1,0 +1,10 @@
+<div class="container">
+<b>NAME:</b><input type="text" ng-model="name">
+<button class="button1" ng-click="studentsearch()">Search</button>
+<br><br>
+<ul class="list-group">
+<li class="list-group-item" dir-paginate="blog in blogs | itemsPerPage:8" >
+<a href="#/students/{{blog.id}}">{{blog.name}}</a>
+</li>
+</ul>
+</div>
